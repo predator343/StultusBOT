@@ -26,6 +26,7 @@ console.log("------------");
 
 bot.on("ready", () => {
   console.log(bot.user.username + " is online.")
+  bot.user.setActivity('my prefix (' + config.prefix + ")", { type: 'WATCHING' })
 });
 
 bot.on("message", async message => {
