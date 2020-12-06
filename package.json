@@ -1,7 +1,7 @@
 {
   "name": "xbot",
   "version": "1.0.0",
-  "description": "A template for Discordjs with command handler and example file.",
+  "description": "A bot",
   "main": "index.js",
   "scripts": {
     "start": "index.js"
