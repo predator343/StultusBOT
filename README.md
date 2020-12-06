@@ -1,2 +1,2 @@
 # xBot
-A simple bot framework.
+A simple bot template.
