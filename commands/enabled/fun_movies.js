@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const opn = require('opn');
-const movies = require("./files/movies.json")
+const movies = require("./configs/movies.json")
 
 module.exports.run = async (bot, message, args) => {
   //this is where the actual code for the command goes

@@ -5,7 +5,7 @@ const fs = require("fs");
 bot.commands = new Discord.Collection();
 if(config.token === "setmeplease") return console.log("Set your token up! Go to https://www.discordapp.com/developers and generate a token from a bot user.");
 
-fs.readdir("./commands/", (err, files) => {
+fs.readdir("./commands/enabled", (err, files) => {
 
   if(err) console.log(err);
 
@@ -16,7 +16,7 @@ fs.readdir("./commands/", (err, files) => {
   }
 
 jsfile.forEach((f, i) =>{
-  let props = require(`./commands/${f}`);
+  let props = require(`./commands/enabled/${f}`);
   console.log(`${f} loaded!`);
   bot.commands.set(props.help.name, props);
 });
