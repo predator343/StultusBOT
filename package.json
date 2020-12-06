@@ -1,0 +1,25 @@
+{
+  "name": "xbot",
+  "version": "1.0.0",
+  "description": "A template for Discordjs with command handler and example file.",
+  "main": "index.js",
+  "scripts": {
+    "start": "index.js"
+  },
+  "author": "Faulty from {CodeDucks}",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^11.3.2",
+    "fs": "0.0.1-security",
+    "ms": "^2.1.1",
+    "opn": "^6.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codeducks/xBOT.git"
+  },
+  "bugs": {
+    "url": "https://github.com/codeducks/xBOT/issues"
+  },
+  "homepage": "https://github.com/codeducks/xBOT#readme"
+}
