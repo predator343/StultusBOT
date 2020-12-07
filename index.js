@@ -26,7 +26,11 @@ console.log("------------");
 
 bot.on("ready", () => {
   console.log(bot.user.username + " is online.")
-  bot.user.setActivity('my prefix (' + config.prefix + ")", { type: 'WATCHING' })
+  bot.user.setActivity(config.streaming, {
+    type: "STREAMING",
+    url: "https://www.twitch.tv/LiveStultus"
+  });
+  // bot.user.setActivity('my prefix (' + config.prefix + ")", { type: 'WATCHING' })
 });
 
 bot.on("message", async message => {
