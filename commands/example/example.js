@@ -1,10 +1,9 @@
 const Discord = require('discord.js');
-const opn = require('opn');
-const config = require("../config.json")
+const config = require("../../config.json")
 
 module.exports.run = async (bot, message, args) => {
   //this is where the actual code for the command goes
-  
+   
 }
 
 //name this whatever the command name is.

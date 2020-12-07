@@ -1,0 +1,18 @@
+{
+    "title": "Help",
+    "description": "i'm a handy dandy help embed.",
+    
+    "title1": "socials",
+    "content1": "This shows Stultus' socials",
+    
+    "title2": "twitch",
+    "content2": "just a quick link to the Stultus stream.",
+    
+    "selft": "help",
+    "selfc": "this command shows me!",
+
+    "inline": false,
+
+    "footer": "!credits"
+
+}
