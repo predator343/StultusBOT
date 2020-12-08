@@ -8,7 +8,7 @@ module.exports.run = async (bot, message, args) => {
     var m = date.getMinutes();
     if (m < 10)
     {
-        var time = h + ":0" + m;
+        var time = h + ":0" + m; // :0 is neccesary otherwise it wont display properly.
         message.channel.send(time);
     } else {
         var time = h + ":" + m;

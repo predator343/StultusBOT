@@ -2,12 +2,12 @@ const Discord = require('discord.js');
 const config = require("../../config.json");
 
 module.exports.run = async (bot, message, args) => {
-  //this is where the actual code for the command goes
+  // thanks to Will for this code.
   random = Math.floor((Math.random() * 2) + 1);
   if (random == 1) {
-    message.channel.send("heads");
+    message.reply("heads");
   } else {
-    message.channel.send("tails");
+    message.reply("tails");
   }
 }
 
