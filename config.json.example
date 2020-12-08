@@ -1,6 +1,9 @@
 {
   "prefix": "!",
-  "watching": "watching what",
+
+  "presence": "LISTENING",
+  "name": "the chats!",
+
   "token": "setmeplease",
   "owner": "ownerid",
   "owner2": "secondownerid"
