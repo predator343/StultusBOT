@@ -26,7 +26,7 @@ console.log("------------");
 
 bot.on("ready", () => {
   console.log(bot.user.username + " is online.")
-  bot.user.setActivity("you.", {
+  bot.user.setActivity(config.watching, {
     type: "WATCHING"
   });
   // bot.user.setActivity('my prefix (' + config.prefix + ")", { type: 'WATCHING' })

@@ -12,7 +12,7 @@ module.exports.run = async (bot, message, args) => {
         message.channel.send(time);
     } else {
         var time = h + ":" + m;
-        message.channel.send(times);
+        message.channel.send(time);
     }
     
 }
