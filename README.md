@@ -1,2 +1,2 @@
 # xBot
-A simple bot template.
+A simple discord bot.
