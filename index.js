@@ -3,7 +3,11 @@ const config = require("./config.json")
 const bot = new Discord.Client();
 const fs = require("fs");
 bot.commands = new Discord.Collection();
-if(config.token === "setmeplease") return console.log("Set your token up! Go to https://www.discordapp.com/developers and generate a token from a bot user.");
+if(config.token === "setmeplease") return console.log("[!] Set your token up! Go to https://www.discordapp.com/developers and generate a token from a bot user.");
+
+console.clear()
+console.log("xBOT CONSOLE")
+console.log("------------")
 
 fs.readdir("./commands/enabled", (err, files) => {
 
@@ -11,13 +15,13 @@ fs.readdir("./commands/enabled", (err, files) => {
 
   let jsfile = files.filter(f => f.split(".").pop() === "js");
   if(jsfile.length <= 0){
-    console.log("Couldn't find commands.");
+    console.log("[!] Couldn't find commands.");
     return;
   }
 
 jsfile.forEach((f, i) =>{
   let props = require(`./commands/enabled/${f}`);
-  console.log(`${f} loaded!`);
+  console.log(`[*] ${f} loaded!`);
   bot.commands.set(props.help.name, props);
 });
 console.log("------------");
@@ -25,7 +29,7 @@ console.log("------------");
 
 
 bot.on("ready", () => {
-  console.log(bot.user.username + " is online.")
+  console.log("[!] " + bot.user.username + " is online.")
   bot.user.setActivity(config.name, {
     type: config.presence // WATCHING, STREAMING, LISTENING OR PLAYING set it in config.json
   });
@@ -46,7 +50,5 @@ bot.on("message", async message => {
   if(commandfile) commandfile.run(bot,message,args);
 })
 
-console.clear()
-console.log("xBOT CONSOLE")
-console.log("------------")
+
 bot.login(config.token)
