@@ -11,7 +11,7 @@ Generate a random number between 0 and 1000.
 flips a coin.  
 * !say  
 Say something as the bot!  
-* !sophie (report)
+* !sophie (report)  
 Shows an embed about Sophie and a link to the report form.  
 
 * more soon!
