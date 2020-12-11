@@ -7,6 +7,12 @@ exits the bot.
 tells the time.  
 * !numgen  
 Generate a random number between 0 and 1000.  
+* !del  
+Deletes the number of messages specified. (up until 100)
+* !ban  
+Bans the specified user.  
+* !kick  
+Kicks the specified user.  
 * !coinflip  
 flips a coin.  
 * !say  
