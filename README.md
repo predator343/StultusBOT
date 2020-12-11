@@ -19,5 +19,5 @@ flips a coin.
 Say something as the bot!  
 * !sophie (report)  
 Shows an embed about Sophie and a link to the report form.  
-
-* more soon!
+  
+* more soon!  

@@ -5,6 +5,5 @@
   "name": "the chats!",
 
   "token": "setmeplease",
-  "owner": "ownerid",
-  "owner2": "secondownerid"
+  "owner": "ownerid"
 }
