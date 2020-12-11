@@ -15,9 +15,18 @@ module.exports.run = async (bot, message, args) => {
 
   // randomizes it.
   var srtat = Math.floor(Math.random() * start.length);
+  
+  if (args == "") {
+    
+    var random = Math.floor(Math.random() * conf.num_def);
+    message.reply(start[srtat] + conf.md + random + conf.md);
+  
+  } else {
+  
+        var random = Math.floor(Math.random() * args);
 
-  var random = Math.floor(Math.random() * 1000);
-  message.reply(start[srtat] + conf.md + random + conf.md);
+        message.reply(start[srtat] + conf.md + random + conf.md);
+  }
 }
 
 //name this whatever the command name is.

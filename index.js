@@ -28,7 +28,7 @@ console.log("------------");
 });
 
 
-bot.on("ready", () => {
+  bot.on("ready", () => {
   console.log("[!] " + bot.user.username + " is online.")
   bot.user.setActivity(config.name, {
     type: config.presence // WATCHING, STREAMING, LISTENING OR PLAYING set it in config.json
@@ -50,5 +50,4 @@ bot.on("message", async message => {
   if(commandfile) commandfile.run(bot,message,args);
 })
 
-
-bot.login(config.token)
+bot.login(config.token) // change your token in the config.json
