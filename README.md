@@ -1,4 +1,5 @@
-A simple discord bot.
+A simple discord bot.  
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/codeducks/xBOT/tree/master)
 ## Commands.  
 * !exit  
 exits the bot.  
