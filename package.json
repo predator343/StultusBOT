@@ -4,7 +4,7 @@
   "description": "A bot",
   "main": "index.js",
   "scripts": {
-    "start": "index.js"
+    "start": "node index.js"
   },
   "author": "Faulty from {CodeDucks}",
   "license": "ISC",
