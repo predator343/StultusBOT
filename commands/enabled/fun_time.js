@@ -1,9 +1,12 @@
 const Discord = require('discord.js');
 const conf = require('../configs/global.json');
+const embed = new Discord.RichEmbed();
 var date = new Date();
 
 module.exports.run = async (bot, message, args) => {
   //this is where the actual code for the command goes
+  
+
     var tz = date.getTimezoneOffset() / 60;
     var h = date.getHours();
     var m = date.getMinutes();
@@ -27,8 +30,10 @@ module.exports.run = async (bot, message, args) => {
     }
 
 
+    embed.setColor('RANDOM');
+    embed.setTitle(start[srtat] + conf.md + time + " UTC" + tz + conf.md);
 
-    message.channel.send(start[srtat] + conf.md + time + " UTC" + tz + conf.md);
+    message.reply(embed);
 }
 
 //name this whatever the command name is.

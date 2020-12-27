@@ -4,7 +4,7 @@ const conf = require("../configs/global.json");
 
 module.exports.run = async (bot, message, args) => {
   //this is where the actual code for the command goes
-
+  const embed = new Discord.RichEmbed();
   // comes before the number
   const start = [
     "Your number: ",
@@ -19,14 +19,17 @@ module.exports.run = async (bot, message, args) => {
   if (args == "") {
     
     var random = Math.floor(Math.random() * conf.num_def);
-    message.reply(start[srtat] + conf.md + random + conf.md);
   
   } else {
   
-        var random = Math.floor(Math.random() * args);
-
-        message.reply(start[srtat] + conf.md + random + conf.md);
+    var random = Math.floor(Math.random() * args);
+        
   }
+
+  embed.setColor('RANDOM')
+  embed.setTitle(start[srtat] + conf.md + random + conf.md);
+  
+  message.reply(embed);
 }
 
 //name this whatever the command name is.

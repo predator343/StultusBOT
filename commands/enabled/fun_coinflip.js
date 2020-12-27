@@ -1,5 +1,6 @@
 const Discord = require('discord.js');
 const config = require("../../config.json");
+const embed = new Discord.RichEmbed();
 const conf = require("../configs/global.json");
 
 module.exports.run = async (bot, message, args) => {
@@ -23,8 +24,10 @@ module.exports.run = async (bot, message, args) => {
     var result = "tails"
   }
 
-  message.reply(start[srtat] + conf.md + result + conf.md);
+  embed.setColor('RANDOM');
+  embed.setTitle(start[srtat] + conf.md + result + conf.md);
   
+  message.reply(embed);
 }
 
 //name this whatever the command name is.
