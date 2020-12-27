@@ -7,6 +7,10 @@ exits the bot.
 tells the time.  
 * !numgen  
 Generate a random number between 0 and 1000.  
+* !meme  
+Gets a meme from r/memes.  
+* !cringe  
+Gets a cringy post from r/cringe. (needs some tweaking)
 * !del  
 Deletes the number of messages specified. (up until 100)
 * !ban  
