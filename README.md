@@ -1,4 +1,3 @@
-# xBot
 A simple discord bot.
 ## Commands.  
 * !exit  
