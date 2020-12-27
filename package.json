@@ -13,9 +13,7 @@
     "discord.js": "^11.3.2",
     "dotenv": "^8.2.0",
     "fs": "0.0.1-security",
-    "got": "^11.8.1",
-    "ms": "^2.1.1",
-    "opn": "^6.0.0"
+    "got": "^11.8.1"
   },
   "repository": {
     "type": "git",
