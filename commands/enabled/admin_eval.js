@@ -1,10 +1,11 @@
 const Discord = require('discord.js');
 const config = require("../../config.json");
+const env = require('dotenv');
 
 module.exports.run = async (bot, message, args) => {
   //this is where the actual code for the command goes
-  if (message.member.user.id !== config.owner) message.reply("you aint no bot owner!");
-  if (message.member.user.id !== config.owner) return;
+  if (message.member.user.id !== process.env.OWNER) message.reply("you aint no bot owner!");
+  if (message.member.user.id !== process.env.OWNER) return;
 
     const clean = text => {
         if (typeof(text) === "string")

@@ -1,12 +1,13 @@
 const Discord = require("discord.js")
+require('dotenv').config()
+const fs = require("fs")
 const config = require("./config.json")
 const bot = new Discord.Client();
-const fs = require("fs");
 
 bot.commands = new Discord.Collection();
 bot.aliases = new Discord.Collection();
 
-if(config.token === "setmeplease") return console.log("[!] Set your token up! Go to https://www.discordapp.com/developers and generate a token from a bot user.");
+if(process.env.TOKEN === "setmeplease") return console.log("[!] Set your token up! Go to https://www.discordapp.com/developers and generate a token from a bot user.");
 
 console.clear()
 console.log("StultusBOT CONSOLE")
@@ -57,4 +58,4 @@ bot.on("message", async message => {
   if(commandfile) commandfile.run(bot,message,args);
 })
 
-bot.login(config.token) // change your token in the config.json
+bot.login(process.env.TOKEN) // change your token in the config.json
