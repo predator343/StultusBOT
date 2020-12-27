@@ -1,5 +1,5 @@
 {
-  "name": "xbot",
+  "name": "stultusbot",
   "version": "1.0.0",
   "description": "A bot",
   "main": "index.js",
@@ -9,8 +9,10 @@
   "author": "Faulty from {CodeDucks}",
   "license": "ISC",
   "dependencies": {
+    "date": "^1.0.2",
     "discord.js": "^11.3.2",
     "fs": "0.0.1-security",
+    "got": "^11.8.1",
     "ms": "^2.1.1",
     "opn": "^6.0.0"
   },

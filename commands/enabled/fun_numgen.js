@@ -31,5 +31,6 @@ module.exports.run = async (bot, message, args) => {
 
 //name this whatever the command name is.
 module.exports.help = {
-  name: "numgen"
+  name: "numgen",
+  aliases: []
 }
