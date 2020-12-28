@@ -10,7 +10,7 @@ bot.aliases = new Discord.Collection();
 if(process.env.TOKEN === "setmeplease") return console.log("[!] Set your token up! Go to https://www.discordapp.com/developers and generate a token from a bot user.");
 
 console.clear()
-console.log("StultusBOT CONSOLE")
+console.log("xBOT CONSOLE")
 console.log("------------")
 
 fs.readdir("./commands/enabled", (err, files) => {
