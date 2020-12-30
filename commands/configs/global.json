@@ -1,6 +1,12 @@
 {
     "md": "**",
     "num_def": "1000",
+
+    "prefix": "!",
+
+    "presence": "WATCHING",
+    "name": "the chats!",
+
     "github": "https://github.com/codeducks/xBOT",
     "cmds": "https://codeducks.github.io/xBOT",
     "changelog": "https://codeducks.github.io/xBOT/changelog.md"
