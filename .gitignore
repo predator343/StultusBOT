@@ -1,5 +1,4 @@
 node_modules
 *.code-workspace
-test.js
 config.json
 .env
