@@ -27,8 +27,7 @@ module.exports.run = async (bot, message, args) => {
     if (args[0] == "changelog" ) {
       embed.setTitle("Changelog");
       embed.setColor('RANDOM');
-      embed.addField(global.info.ft1, global.info.fc1, false);
-      embed.addField(global.info.ft2, global.info.fc2, false);
+      embed.addField("Link to the changelog", global.changelog, false);
 
       embed.setTimestamp();
 

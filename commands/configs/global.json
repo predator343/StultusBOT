@@ -3,11 +3,5 @@
     "num_def": "1000",
     "github": "https://github.com/codeducks/xBOT",
     "cmds": "https://codeducks.github.io/xBOT",
-
-    "info": {
-        "ft1": "Last.FM Integration!",
-        "fc1" : "You can now lookup top tracks in countries.",
-        "ft2" : "Redid the command loader!",
-        "fc2" : "I did this to  alow for aliases."
-    }
+    "changelog": "https://codeducks.github.io/xBOT/changelog.md"
 }
