@@ -1,6 +1,6 @@
 # CHANGELOG
 
-## [v1.0.1](https://github.com/codeducks/xBOT/releases/tag/v1.0.1) (unreleased)    
+## [v1.0.1](https://github.com/codeducks/xBOT/releases/tag/v1.0.1) (30/12/2020)    
 
 + Deleted config.json and put the variables in global.json
 + bug fixes.
