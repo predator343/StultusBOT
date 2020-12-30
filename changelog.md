@@ -3,6 +3,7 @@
 ## [v1.0.1](https://github.com/codeducks/xBOT/releases/tag/v1.0.1) (unreleased)    
   
 + bug fixes.  
++ Deleted config.json and put the variables in .env
 
 Still working on it...  
 

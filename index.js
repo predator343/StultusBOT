@@ -1,7 +1,6 @@
 const Discord = require("discord.js")
 require('dotenv').config()
 const fs = require("fs")
-const config = require("./config.json")
 const bot = new Discord.Client();
 
 bot.commands = new Discord.Collection();
@@ -38,25 +37,25 @@ fs.readdir("./commands/enabled", (err, files) => {
 
 bot.on("ready", () => {
   console.log("[!] " + bot.user.username + " is online.")
-  bot.user.setActivity(config.name, {
-    type: config.presence // WATCHING, STREAMING, LISTENING OR PLAYING set it in config.json
+  bot.user.setActivity(process.env.name, {
+    type: process.env.presence // WATCHING, STREAMING, LISTENING OR PLAYING set it in config.json
   });
 });
 
 bot.on("message", async message => {
   //a little bit of data parsing/general checks
-  if (message.content.indexOf(config.prefix) !== 0) return;
+  if (message.content.indexOf(process.env.prefix) !== 0) return;
   if(message.author.bot) return;
   if(message.channel.type === 'dm') return;
   let content = message.content.split(" ");
   let command = content[0];
   let args = content.slice(1);
-  let prefix = config.prefix;
+  let prefix = process.env.prefix;
 
 
   //checks if message contains a command and runs it
-  const commandfile = bot.commands.get(command.slice(prefix.length)) || bot.commands.get(bot.aliases.get(command.slice(prefix.length)));
+  const commandfile = bot.commands.get(command.slice(process.env.length)) || bot.commands.get(bot.aliases.get(command.slice(prefix.length)));
   if(commandfile) commandfile.run(bot,message,args);
 })
 
-bot.login(process.env.TOKEN) // change your token in the config.json
+bot.login(process.env.TOKEN) // change your token in the .env

@@ -1,6 +1,5 @@
 const Discord = require('discord.js');
 const global = require("../configs/global.json");
-const config = require("../../config.json");
 const env = require('dotenv');
 const got = require('got');
 

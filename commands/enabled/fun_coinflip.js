@@ -1,5 +1,4 @@
 const Discord = require('discord.js');
-const config = require("../../config.json");
 const embed = new Discord.RichEmbed();
 const conf = require("../configs/global.json");
 
