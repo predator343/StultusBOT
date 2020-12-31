@@ -8,6 +8,16 @@ module.exports.run = async (bot, message, args) => {
   //this is where the actual code for the command goes
     const embed = new Discord.RichEmbed();
 
+    if(!args[0]) {
+
+      embed.setColor('RANDOM');
+      embed.setTitle(exports.help.name + " help.");
+      embed.addField("layout:", config.prefix + exports.help.name + " [server/channel]", false);
+      embed.addField("purpose:", "Nukes the channel or the server.", false);
+      message.channel.send(embed);
+      return;
+    }
+
     if(args[0] == "-h") {
 
       embed.setColor('RANDOM');
