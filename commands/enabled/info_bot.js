@@ -40,6 +40,7 @@ module.exports.run = async (bot, message, args) => {
         embed.addField( "Bot Owner" , user, true);
         embed.addField("Uptime:", format(uptime), true);
         embed.addField("Bot Commands", global.cmds, false);
+        if(process.env.CLIENTID) embed.addField("Invite:", "https://discord.com/api/oauth2/authorize?client_id=" + process.env.CLIENTID + "&permissions=8&scope=bot")
 
         embed.setTimestamp();
 

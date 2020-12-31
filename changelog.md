@@ -1,10 +1,27 @@
 # CHANGELOG
 
+<<<<<<< HEAD
 ## [v1.0.1](https://github.com/codeducks/xBOT/releases/tag/v1.0.1) (30/12/2020)    
 
 + Deleted config.json and put the variables in global.json
 + bug fixes.
 
+=======
+## [v1.2](https://github.com/codeducks/xBOT/releases/tag/v1.2) (31/12/2020)    
+  
++ bug fixes.  
++ Deleted config.json and put the variables in .env
++ added CLIENTID in .env
++ added a dynamic invite link (thus the CLIENTID).
++ added admin_presence.js command.
++ added info_uptime.js command.
++ added admin_prefix.js command.
+
+## [v1.0.1](https://github.com/codeducks/xBOT/releases/tag/v1.0.1) (30/12/2020)    
+
++ Deleted config.json and put the variables in global.json
++ bug fixes.
+>>>>>>> dev
 
 ## [v1.0](https://github.com/codeducks/xBOT/releases/tag/v1.0) (28/12/2020)
 + bug fixes.

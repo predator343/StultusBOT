@@ -1,5 +1,8 @@
 A simple discord bot.  
+  
+[![Wiki](https://img.icons8.com/ios/32/000000/wikipedia.png)](https://www.github.com/codeducks/xBOT/wiki)  
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/codeducks/xBOT/tree/master)
+
 ## Commands.  
 * !exit  
 exits the bot.  
