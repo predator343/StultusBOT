@@ -4,6 +4,18 @@ const conf = require("../configs/global.json");
 module.exports.run = async (bot, message, args) => {
   //this is where the actual code for the command goes
   const embed = new Discord.RichEmbed();
+
+  if(args[0] == "-h") {
+
+    embed.setColor('RANDOM');
+    embed.setTitle(exports.help.name + " help.");
+    embed.addField("layout:", config.prefix + exports.help.name + "", false);
+    embed.addField("purpose:", "Generates a number.", false);
+    message.channel.send(embed);
+    return;
+
+  }
+
   // comes before the number
   const start = [
     "Your number: ",

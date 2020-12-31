@@ -3,6 +3,18 @@ const env = require('dotenv')
 
 module.exports.run = async (bot, message, args) => {
   //this is where the actual code for the command goes
+
+  if(args[0] == "-h") {
+
+    embed.setColor('RANDOM');
+    embed.setTitle(exports.help.name + " help.");
+    embed.addField("layout:", config.prefix + exports.help.name + "", false);
+    embed.addField("purpose:", "Stops the bot.", false);
+    message.channel.send(embed);
+    return;
+
+  }
+
   if (message.member.user.id == process.env.OWNER)
   {
     message.reply('The bot will now shut down.\n'

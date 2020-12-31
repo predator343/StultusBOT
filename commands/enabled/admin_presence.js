@@ -12,7 +12,7 @@ module.exports.run = async (bot, message, args) => {
   if(args[0] == "-h") {
     const embed = new Discord.RichEmbed();
     embed.setColor('RANDOM');
-    embed.setTitle("Presence help.");
+    embed.setTitle(exports.help.name + " help.");
     embed.addField("layout:", config.prefix + exports.help.name + " [WATCHING, LISTENING, PLAYING] " + '[what?]', false);
     embed.addField("Please note.", "Listening will say 'listening to', so don't add to if you use LISTENING", false);
     message.channel.send(embed);

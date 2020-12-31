@@ -6,6 +6,16 @@ var date = new Date();
 module.exports.run = async (bot, message, args) => {
   //this is where the actual code for the command goes
   
+  if(args[0] == "-h") {
+
+    embed.setColor('RANDOM');
+    embed.setTitle(exports.help.name + " help.");
+    embed.addField("layout:", config.prefix + exports.help.name + "", false);
+    embed.addField("purpose:", "Shows the time.", false);
+    message.channel.send(embed);
+    return;
+
+  }
 
     var tz = date.getTimezoneOffset() / 60;
     var h = date.getHours();

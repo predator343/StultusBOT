@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## [v1.2.1](https://github.com/codeducks/xBOT/releases/tag/v1.2.1) (unreleased)
+
++ changed prefix to ./
++ added -h (help) to every command.
++ removed unnecessary dependencies.
++ added nuke command. 
+
 ## [v1.2](https://github.com/codeducks/xBOT/releases/tag/v1.2) (31/12/2020)    
   
 + bug fixes.  

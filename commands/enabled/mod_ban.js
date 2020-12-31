@@ -2,6 +2,17 @@ const Discord = require('discord.js');
 
 module.exports.run = async (bot, message, args) => {
   //this is where the actual code for the command goes
+
+  if(args[0] == "-h") {
+
+    embed.setColor('RANDOM');
+    embed.setTitle(exports.help.name + " help.");
+    embed.addField("layout:", config.prefix + exports.help.name + " [USER]", false);
+    embed.addField("purpose:", "Bans the specified user", false);
+    message.channel.send(embed);
+    return;
+
+  }
    
   if (message.member.hasPermission('BAN_MEMBERS')){
       

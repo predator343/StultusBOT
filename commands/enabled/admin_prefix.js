@@ -4,6 +4,18 @@ const env = require('dotenv');
 const config = require("../configs/global.json");
 
 exports.run = (client, message, args) => {
+
+  if(args[0] == "-h") {
+
+    embed.setColor('RANDOM');
+    embed.setTitle(exports.help.name + " help.");
+    embed.addField("layout:", config.prefix + " " + exports.help.name + " [NEW PREFIX]", false);
+    embed.addField("purpose:", "Change the prefix.", false);
+    message.channel.send(embed);
+    return;
+
+  }
+
   if (message.member.user.id !== process.env.OWNER) return;
 
   console.log("[!] The prefix is now: " + args[0]);

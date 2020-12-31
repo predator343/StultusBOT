@@ -3,6 +3,18 @@ const got = require('got');
 
 module.exports.run = async (bot, message, args) => {
 	const embed = new Discord.RichEmbed();
+
+	if(args[0] == "-h") {
+
+		embed.setColor('RANDOM');
+		embed.setTitle(exports.help.name + " help.");
+		embed.addField("layout:", config.prefix + exports.help.name + "", false);
+		embed.addField("purpose:", "shows a meme from reddit.", false);
+		message.channel.send(embed);
+		return;
+	
+	  }
+
 	got('https://www.reddit.com/r/memes/random/.json')
 		.then(response => {
 			const [list] = JSON.parse(response.body);

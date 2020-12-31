@@ -6,6 +6,17 @@ module.exports.run = async (bot, message, args) => {
   // thanks to Will for this code.
   random = Math.floor((Math.random() * 2) + 1);
 
+  if(args[0] == "-h") {
+
+    embed.setColor('RANDOM');
+    embed.setTitle(exports.help.name + " help.");
+    embed.addField("layout:", config.prefix + exports.help.name + "", false);
+    embed.addField("purpose:", "look at the name.", false);
+    message.channel.send(embed);
+    return;
+
+  }
+
   // comes before the result
   const start = [
     "It is da: ",

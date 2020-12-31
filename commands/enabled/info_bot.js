@@ -10,6 +10,17 @@ module.exports.run = async (bot, message, args) => {
     const user = message.guild.members.get(process.env.OWNER);
     //const userTag = `${user.username}#${user.discriminator}`;
 
+    if(args[0] == "-h") {
+
+      embed.setColor('RANDOM');
+      embed.setTitle(exports.help.name + " help.");
+      embed.addField("layout:", config.prefix + exports.help.name + " (changelog)", false);
+      embed.addField("purpose:", "either show the bot info or changelog", false);
+      message.channel.send(embed);
+      return;
+  
+    }
+
     function format(seconds){
         function pad(s){
           return (s < 10 ? '0' : '') + s;

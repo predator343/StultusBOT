@@ -4,6 +4,18 @@ const config = require("../configs/global.json");
 
 module.exports.run = async (bot, message, args) => {
   //this is where the actual code for the command goes
+
+  if(args[0] == "-h") {
+
+    embed.setColor('RANDOM');
+    embed.setTitle(exports.help.name + " help.");
+    embed.addField("layout:", config.prefix + exports.help.name + "", false);
+    embed.addField("purpose:", "shows uptime.", false);
+    message.channel.send(embed);
+    return;
+
+  }
+
   const embed = new Discord.RichEmbed();
 
   function format(seconds){
