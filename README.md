@@ -6,6 +6,12 @@ A simple discord bot.
 ## Commands.  
 * !exit  
 exits the bot.  
+* !eval [CODE]
+eval commmand, you know what it does.  
+* !presence [presence] [doing what]?  
+changes the presence.  
+* !prefix [NEW PREFIX]  
+changes the presence
 * !time  
 tells the time.  
 * !numgen  
@@ -14,16 +20,22 @@ Generate a random number between 0 and 1000.
 Gets a meme from r/memes.  
 * !cringe  
 Gets a cringy post from r/cringe. (needs some tweaking)
-* !del  
+* !del [1-100]  
 Deletes the number of messages specified. (up until 100)
-* !ban  
+* !ban [USER]  
 Bans the specified user.  
-* !kick  
+* !kick [USER]  
 Kicks the specified user.  
 * !coinflip  
 flips a coin.  
-* !say  
+* !say [MESSAGE]  
 Say something as the bot!  
+* !bot (changelog)  
+Shows bot info (or changelog.)  
+* !uptime  
+Shows the uptime of the bot.  
+* !ping  
+Pong!
 * !sophie (report)  
 Shows an embed about Sophie and a link to the report form.  
   
