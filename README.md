@@ -1,3 +1,9 @@
+<style>
+.tablelines table, .tablelines td, .tablelines th {
+        border: 1px solid black;
+        }
+</style>
+
 A simple discord bot.  
   
 [![Wiki](https://img.icons8.com/ios/32/000000/wikipedia.png)](https://www.github.com/codeducks/xBOT/wiki)  
@@ -25,3 +31,5 @@ add your prefix before the command.
 | ping | N/A |Pong!
 | sophie (report) | N/A |Shows an embed about Sophie and a link to the report form.  
 | more soon! |
+
+{: .tablelines}
