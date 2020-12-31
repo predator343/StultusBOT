@@ -6,7 +6,7 @@ A simple discord bot.
 ## Commands.  
 * !exit  
 exits the bot.  
-* !eval [CODE]
+* !eval [CODE]  
 eval commmand, you know what it does.  
 * !presence [presence] [doing what]?  
 changes the presence.  
