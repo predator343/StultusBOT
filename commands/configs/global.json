@@ -2,7 +2,7 @@
     "md": "**",
     "num_def": "1000",
 
-    "prefix": "!",
+    "prefix": "./",
 
     "presence": "WATCHING",
     "name": "the chats!",

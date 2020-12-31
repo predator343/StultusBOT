@@ -24,6 +24,6 @@ add your prefix before the command.
 | bot (changelog) | info | Shows bot info (or changelog.) | 
 | uptime | N/A |Shows the uptime of the bot. | 
 | ping | N/A |Pong!
-| sophie (report) | N/A |Shows an embed about Sophie and a link to the report form.  
+| sophie (report) | N/A |Shows an embed about Sophie and a link to the report form. | 
 | more soon! |
 
