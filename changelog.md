@@ -4,6 +4,18 @@
   
 + bug fixes.  
 + Deleted config.json and put the variables in .env
++ added CLIENTID in .env
++ added a dynamic invite link (thus the CLIENTID).
+
+## [v1.0.2](https://github.com/codeducks/xbot/releases/tag/v1.0.2) (unreleased)
+
++ added util_ping.js.
++ added util_prefix.js
+
+## [v1.0.1](https://github.com/codeducks/xBOT/releases/tag/v1.0.1) (30/12/2020)    
+
++ Deleted config.json and put the variables in global.json
++ bug fixes.
 
 Still working on it...  
 
