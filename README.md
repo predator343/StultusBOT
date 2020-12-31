@@ -1,8 +1,3 @@
-<style>
-.tablelines table, .tablelines td, .tablelines th {
-        border: 1px solid black;
-        }
-</style>
 
 A simple discord bot.  
   
@@ -32,4 +27,3 @@ add your prefix before the command.
 | sophie (report) | N/A |Shows an embed about Sophie and a link to the report form.  
 | more soon! |
 
-{: .tablelines}
