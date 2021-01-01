@@ -5,7 +5,7 @@ module.exports.run = async (bot, message, args) => {
   //this is where the actual code for the command goes
 
   if(args[0] == "-h") {
-
+    const embed = new Discord.MessageEmbed();
     embed.setColor('RANDOM');
     embed.setTitle(exports.help.name + " help.");
     embed.addField("layout:", config.prefix + exports.help.name + "", false);

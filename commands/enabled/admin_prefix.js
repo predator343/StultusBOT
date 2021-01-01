@@ -6,7 +6,7 @@ const config = require("../configs/global.json");
 exports.run = (client, message, args) => {
 
   if(args[0] == "-h") {
-
+    const embed = new Discord.MessageEmbed();
     embed.setColor('RANDOM');
     embed.setTitle(exports.help.name + " help.");
     embed.addField("layout:", config.prefix + " " + exports.help.name + " [NEW PREFIX]", false);

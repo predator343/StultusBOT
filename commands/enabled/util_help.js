@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 
 module.exports.run = async (bot, message, args) => {
   //this is where the actual code for the command goes
-    const embed = new Discord.RichEmbed();
+    const embed = new Discord.MessageEmbed();
     embed.setTitle("click me!");
     embed.setURL("https://codeducks.github.io/xBOT");
 

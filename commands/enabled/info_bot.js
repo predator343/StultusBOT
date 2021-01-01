@@ -5,13 +5,13 @@ const got = require('got');
 
 module.exports.run = async (bot, message, args) => {
   //this is where the actual code for the command goes
-    const embed = new Discord.RichEmbed();
+    const embed = new Discord.MessageEmbed();
 
     const user = message.guild.members.get(process.env.OWNER);
     //const userTag = `${user.username}#${user.discriminator}`;
 
     if(args[0] == "-h") {
-
+      const embed = new Discord.MessageEmbed();
       embed.setColor('RANDOM');
       embed.setTitle(exports.help.name + " help.");
       embed.addField("layout:", config.prefix + exports.help.name + " (changelog)", false);
