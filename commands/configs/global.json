@@ -4,6 +4,8 @@
 
     "prefix": "./",
 
+    "version": "pre-1.3",
+
     "presence": "WATCHING",
     "name": "the chats!",
 
