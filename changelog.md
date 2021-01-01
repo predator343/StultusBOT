@@ -1,6 +1,6 @@
 # CHANGELOG
 
-## [v1.3](https://github.com/codeducks/xBOT/releases/tag/v1.2.1) (unreleased)
+## [v1.3](https://github.com/codeducks/xBOT/releases/tag/v1.2.1) (1/1/2021)
 
 + changed prefix to ./
 + added -h (help) to every command.
