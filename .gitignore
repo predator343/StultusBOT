@@ -1,5 +1,7 @@
 node_modules
 *.code-workspace
 config.json
+.vscode
 .env
 _config.yml
+logs

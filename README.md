@@ -6,24 +6,27 @@ A simple discord bot.
 
 ## Commands.  
 add your prefix before the command.  
+you can always add -h after a command to see what it does
 | Command | Aliases | Description |  
 --- | --- | ---   
-| exit | stop | exits the bot. |  
+| ban [USER] | N/A | Bans the specified user. |  
+| bot (changelog) | info | Shows bot info (or changelog.) |  
+| cringe | N/A | Gets a cringy post from r/cringe. (needs some tweaking) |  
+| coinflip | N/A | flips a coin. |  
+| del [1-100] | purge, delete | Deletes the number of messages specified. (up until 100) |
 | eval [CODE] | N/A | eval commmand, you know what it does.  |  
-| presence [presence] [doing what]? | N/A | changes the presence.  |
-| prefix [NEW PREFIX] | N/A | changes the presence |
-| time | N/A | tells the time. |  
+| exit | stop | exits the bot. |  
+| hash [string] | N/A | hashes string |
+| kick [USER] | N/A | Kicks the specified user. |  
+| meme | N/A | Gets a meme from r/memes. |  
+| nuke [server/channel] | N/A | Nukes a server or channel. |
 | numgen | N/A | Generate a random number between 0 and 1000. |
-| meme | N/A | Gets a meme from r/memes. |
-| cringe | N/A | Gets a cringy post from r/cringe. (needs some tweaking) |
-| del [1-100] | purge, delete | Deletes the number of messages specified. (up until 100)
-| ban [USER] | N/A | Bans the specified user. | 
-| kick [USER] | N/A | Kicks the specified user. | 
-| coinflip | N/A | flips a coin. | 
-| say [MESSAGE] | N/A |Say something as the bot! | 
-| bot (changelog) | info | Shows bot info (or changelog.) | 
-| uptime | N/A |Shows the uptime of the bot. | 
-| ping | N/A |Pong!
-| sophie (report) | N/A |Shows an embed about Sophie and a link to the report form. | 
+| ping | N/A | Pong! |  
+| prefix [NEW PREFIX] | N/A | changes the presence |  
+| presence [presence] [doing what]? | N/A | changes the presence.  |  
+| say [MESSAGE] | N/A | Say something as the bot! |  
+| sophie (report) | N/A | Shows an embed about Sophie and a link to the report form. |  
+| time | N/A | tells the time. |  
+| uptime | N/A | Shows the uptime of the bot. |  
 | more soon! |
 

@@ -3,6 +3,7 @@ require('dotenv').config()
 const global = require("./commands/configs/global.json")
 const fs = require("fs")
 const bot = new Discord.Client();
+const main = require('./exports');
 
 bot.commands = new Discord.Collection();
 bot.aliases = new Discord.Collection();

@@ -1,4 +1,6 @@
 const Discord = require('discord.js');
+const main = require('../../exports');
+
 
 module.exports.run = async (bot, message, args) => {
   //this is where the actual code for the command goes
@@ -19,6 +21,7 @@ module.exports.run = async (bot, message, args) => {
         message.reply("You can only delete 100 messages at a time!");
        } else {
         message.delete();
+        main.stats(args[0] + " messages were deleted.");
         message.channel.bulkDelete(args[0]);
     }
   } else {

@@ -1,14 +1,12 @@
-
-
 const Discord = require('discord.js');
-
+const main = require('../../exports');
 const config = require("../configs/global.json");
 
 module.exports.run = async (bot, message, args) => {
   //this is where the actual code for the command goes
     const embed = new Discord.RichEmbed();
 
-    if(!args[0]) {
+    if(args[0] == "") {
 
       embed.setColor('RANDOM');
       embed.setTitle(exports.help.name + " help.");
@@ -32,9 +30,11 @@ module.exports.run = async (bot, message, args) => {
 
     if(args[0] == "server"){
         message.guild.channels.deleteAll();
+        main.stats("A server was nuked!");
     }
     if(args[0] == "channel"){
         message.channel.delete();
+        main.stats("A channel was nuked!")
     }
 }
 

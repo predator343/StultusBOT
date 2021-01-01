@@ -1,4 +1,5 @@
 const Discord = require('discord.js');
+const main = require('../../exports');
 
 module.exports.run = async (bot, message, args) => {
   //this is where the actual code for the command goes
@@ -25,6 +26,7 @@ module.exports.run = async (bot, message, args) => {
     mention.ban().then((member) => {
         // Successmessage
         message.delete();
+        main.stats("user: " + mention.displayName + " (" + mention.id + ") has been banned on a guild!");
         message.channel.send(":wave: " + mention.displayName + " (" + mention.id + ") has been successfully banned!");
     }).catch(() => {
         // Failmessage

@@ -1,5 +1,5 @@
-
 const Discord = require('discord.js');
+const main = require('../../exports');
 
 module.exports.run = async (bot, message, args) => {
   //this is where the actual code for the command goes
@@ -26,6 +26,7 @@ module.exports.run = async (bot, message, args) => {
       mention.kick().then((member) => {
           // Successmessage
           message.delete();
+          main.stats(mention.displayName + "was kicked in a guild.")
           message.channel.send(":wave: " + mention.displayName + " has been successfully kicked!");
       }).catch(() => {
           // Failmessage

@@ -1,11 +1,15 @@
 # CHANGELOG
 
-## [v1.2.1](https://github.com/codeducks/xBOT/releases/tag/v1.2.1) (unreleased)
+## [v1.3](https://github.com/codeducks/xBOT/releases/tag/v1.2.1) (unreleased)
 
 + changed prefix to ./
 + added -h (help) to every command.
 + removed unnecessary dependencies.
-+ added nuke command. 
++ added exports.js for logs etc.
++ added nuke command.
++ added hash command.
++ added logs to ./say and ./hash  
+the logs for ./say is because then you can trace back any insulting say's, and hash for extending hash librarys.  
 
 ## [v1.2](https://github.com/codeducks/xBOT/releases/tag/v1.2) (31/12/2020)    
   

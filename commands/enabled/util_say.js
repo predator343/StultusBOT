@@ -1,4 +1,5 @@
 const Discord = require('discord.js');
+const main = require('../../exports.js');
 
 module.exports.run = async (bot, message, args) => {
   //this is where the actual code for the command goes
@@ -17,9 +18,8 @@ module.exports.run = async (bot, message, args) => {
   var userid = message.author.id
   var user = message.member.displayName
   var msg = args.join(" ");
-  
-  console.log("[!] " + user + " (" + userid + ") made the bot say: " + msg)
-  
+
+  main.silent_log(user + " (" + userid + ") made the bot say: " + msg);
   message.delete();
   message.channel.send(msg);
 }
