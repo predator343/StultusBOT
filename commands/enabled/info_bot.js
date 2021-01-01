@@ -2,7 +2,6 @@ const Discord = require('discord.js');
 const global = require("../configs/global.json");
 const yarn = require("../../package.json");
 const env = require('dotenv');
-const got = require('got');
 
 module.exports.run = async (bot, message, args) => {
   //this is where the actual code for the command goes
@@ -46,7 +45,7 @@ module.exports.run = async (bot, message, args) => {
       return;
 
     } else {
-
+      
         embed.setTitle("Bot Info");
         embed.setColor('RANDOM');
         embed.addField( "Bot Owner" , user, true);
