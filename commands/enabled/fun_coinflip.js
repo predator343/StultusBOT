@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-const embed = new Discord.RichEmbed();
+const embed = new Discord.MessageEmbed();
 const conf = require("../configs/global.json");
 
 module.exports.run = async (bot, message, args) => {
@@ -7,7 +7,7 @@ module.exports.run = async (bot, message, args) => {
   random = Math.floor((Math.random() * 2) + 1);
 
   if(args[0] == "-h") {
-
+    const embed = new Discord.MessageEmbed();
     embed.setColor('RANDOM');
     embed.setTitle(exports.help.name + " help.");
     embed.addField("layout:", config.prefix + exports.help.name + "", false);

@@ -1,17 +1,18 @@
 const Discord = require('discord.js');
 const global = require("../configs/global.json");
+const yarn = require("../../package.json");
 const env = require('dotenv');
 const got = require('got');
 
 module.exports.run = async (bot, message, args) => {
   //this is where the actual code for the command goes
-    const embed = new Discord.RichEmbed();
+    const embed = new Discord.MessageEmbed();
 
     const user = message.guild.members.get(process.env.OWNER);
     //const userTag = `${user.username}#${user.discriminator}`;
 
     if(args[0] == "-h") {
-
+      const embed = new Discord.MessageEmbed();
       embed.setColor('RANDOM');
       embed.setTitle(exports.help.name + " help.");
       embed.addField("layout:", config.prefix + exports.help.name + " (changelog)", false);
@@ -51,7 +52,7 @@ module.exports.run = async (bot, message, args) => {
         embed.addField( "Bot Owner" , user, true);
         embed.addField("Uptime:", format(uptime), true);
         embed.addBlankField(true);
-        embed.addField("Version:", global.version, true);
+        embed.addField("Version:", yarn.version, true);
         embed.addField("Bot Commands", global.cmds, false);
         if(process.env.CLIENTID) embed.addField("Invite:", "https://discord.com/api/oauth2/authorize?client_id=" + process.env.CLIENTID + "&permissions=8&scope=bot")
 

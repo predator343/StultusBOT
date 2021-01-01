@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 
 module.exports.run = async (bot, message, args) => {
   //this is where the actual code for the command goes
-  const sophiehelp = new Discord.RichEmbed()
+  const sophiehelp = new Discord.MessageEmbed()
   .setTitle("Sophie")
   .setDescription("Sophie is an AI Powered child predator prevention bot!")
   .setColor("#1cfc72s")

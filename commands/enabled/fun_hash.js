@@ -6,7 +6,7 @@ module.exports.run = async (bot, message, args) => {
   //this is where the actual code for the command goes
 
   if(args[0] == "") {
-
+    const embed = new Discord.MessageEmbed();
     embed.setColor('RANDOM');
     embed.setTitle(exports.help.name + " help.");
     embed.addField("layout:", config.prefix + exports.help.name + " [hash]", false);
@@ -15,7 +15,7 @@ module.exports.run = async (bot, message, args) => {
     return;
   }
 
-  const embed = new Discord.RichEmbed();
+  const embed = new Discord.MessageEmbed();
   var precrypt = args.join(" ");
   var sha1 = main.hash(precrypt, "sha1");
   var sha256 = main.hash(precrypt, "sha256");

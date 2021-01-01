@@ -4,13 +4,13 @@ const config = require("../configs/global.json");
 
 module.exports.run = async (bot, message, args) => {
   //this is where the actual code for the command goes
-  const embed = new Discord.RichEmbed();
+  const embed = new Discord.MessageEmbed();
 
   if (message.member.user.id !== process.env.OWNER) message.reply("you aint no bot owner!");
   if (message.member.user.id !== process.env.OWNER) return;
 
   if(args[0] == "-h") {
-    const embed = new Discord.RichEmbed();
+    const embed = new Discord.MessageEmbed();
     embed.setColor('RANDOM');
     embed.setTitle(exports.help.name + " help.");
     embed.addField("layout:", config.prefix + exports.help.name + " [WATCHING, LISTENING, PLAYING] " + '[what?]', false);

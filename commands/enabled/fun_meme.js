@@ -2,10 +2,10 @@ const Discord = require('discord.js');
 const got = require('got');
 
 module.exports.run = async (bot, message, args) => {
-	const embed = new Discord.RichEmbed();
+	const embed = new Discord.MessageEmbed();
 
 	if(args[0] == "-h") {
-
+		const embed = new Discord.MessageEmbed();
 		embed.setColor('RANDOM');
 		embed.setTitle(exports.help.name + " help.");
 		embed.addField("layout:", config.prefix + exports.help.name + "", false);
