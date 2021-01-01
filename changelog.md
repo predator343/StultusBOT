@@ -1,6 +1,11 @@
 # CHANGELOG
 
-## [v1.3](https://github.com/codeducks/xBOT/releases/tag/v1.2.1) (1/1/2021)
+## [v1.3.1](https://github.com/codeducks/xBOT/releases/tag/v1.3.1) (1/1/2021)
+
++ massive fix for massive error.
++ bot version now comes from package.json
+
+## [v1.3](https://github.com/codeducks/xBOT/releases/tag/v1.3) (1/1/2021)
 
 + changed prefix to ./
 + added -h (help) to every command.
@@ -20,6 +25,10 @@ the logs for ./say is because then you can trace back any insulting say's, and h
 + added admin_presence.js command.
 + added info_uptime.js command.
 + added admin_prefix.js command.
+
+## [v1.0] (31/12/2020)
+
+Was added to v1.2s
 
 ## [v1.0.1](https://github.com/codeducks/xBOT/releases/tag/v1.0.1) (30/12/2020)    
 
