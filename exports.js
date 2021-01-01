@@ -122,6 +122,6 @@ exports.stats = function(content) {
     }
 	return;
 };
-exports.hash = function(content) {
-    return crypto.createHash("sha1").update(content).digest("hex");
+exports.hash = function(content, type) {
+    return crypto.createHash(type).update(content).digest("hex");
 };
