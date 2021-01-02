@@ -1,6 +1,6 @@
 # CHANGELOG
 
-## [v1.4](https://github.com/codeducks/xBOT/releases/tag/v1.4) (unreleased)
+## [v1.4](https://github.com/codeducks/xBOT/releases/tag/v1.4) (3/12/2021)
 
 + this bot is now modular and modules can be loaded with ./bot load [module]
 + added directory check to exports for command loader.

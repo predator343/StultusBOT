@@ -60,7 +60,9 @@ bot.on("message", async message => {
   if(commandfile) commandfile.run(bot,message,args);
 })
 
-exports.loadCommand = function(a, b){bot.commands.set(a, b)}
-exports.loadAlias = function(c, d){bot.aliases.set(c, d)}
+exports.loadCommand = function(a, b){bot.commands.set(a, b)} // for adding commands to the bot
+exports.loadAlias = function(c, d){bot.aliases.set(c, d)} // for addding aliases to the bot
+
+// ! unload commands (v1.4.1)
 
 bot.login(process.env.TOKEN) // change your token in the global.json

@@ -4,11 +4,8 @@
 
     "prefix": "./",
 
-<<<<<<< HEAD:configs/global.json
     "defaultmodulename": "default",
-
-=======
->>>>>>> master:commands/configs/global.json
+    
     "presence": "WATCHING",
     "name": "the chats!",
 
