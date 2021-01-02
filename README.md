@@ -11,7 +11,7 @@ you can always add -h after a command to see what it does
 --- | --- | ---   
 | ban [USER] | N/A | Bans the specified user. |  
 | bot (changelog) | info | Shows bot info (or changelog.) |  
-| bot load [module/all] | Load a module. | Loads module (can only be used by owner.) |
+| bot load [module/all] | N/A | Loads module (can only be used by owner.) |
 | cringe | N/A | Gets a cringy post from r/cringe. (needs some tweaking) |  
 | coinflip | N/A | flips a coin. |  
 | del [1-100] | purge, delete | Deletes the number of messages specified. (up until 100) |
