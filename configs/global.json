@@ -4,6 +4,8 @@
 
     "prefix": "./",
 
+    "defaultmodulename": "default",
+
     "presence": "WATCHING",
     "name": "the chats!",
 

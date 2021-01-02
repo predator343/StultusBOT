@@ -1,5 +1,13 @@
 # CHANGELOG
 
+## [v1.4](https://github.com/codeducks/xBOT/releases/tag/v1.4) (unreleased)
+
++ this bot is now modular and modules can be loaded with ./bot load [module]
++ added directory check to exports for command loader.
++ changed global.json location.
++ added defaultmodulename to global.json for module loader.
++ fixed weird error when stopping bot.
+
 ## [v1.3.1](https://github.com/codeducks/xBOT/releases/tag/v1.3.1) (1/1/2021)
 
 + massive fix for massive error.

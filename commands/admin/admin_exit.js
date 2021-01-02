@@ -30,7 +30,7 @@ module.exports.run = async (bot, message, args) => {
         { max: 1, time: 30000 }).then(collected => {
           if (collected.first().emoji.name == '👍') {
             message.reply('Shutting down...');
-              bot.destroy();
+              process.exit(0);
           } else
             message.reply('Operation canceled.');
           });

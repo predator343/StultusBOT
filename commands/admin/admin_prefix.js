@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const fs = require('fs');
 const env = require('dotenv');
-const config = require("../configs/global.json");
+const config = require("../../configs/global.json");
 
 exports.run = (client, message, args) => {
 

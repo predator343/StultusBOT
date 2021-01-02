@@ -1,6 +1,7 @@
 const Discord = require('discord.js');
-const global = require("../configs/global.json");
+const global = require("../../configs/global.json");
 const yarn = require("../../package.json");
+const exp = require('../../exports')
 const env = require('dotenv');
 const got = require('got');
 
@@ -8,7 +9,9 @@ module.exports.run = async (bot, message, args) => {
   //this is where the actual code for the command goes
     const embed = new Discord.MessageEmbed();
 
-    const user = message.guild.members.get(process.env.OWNER);
+    var loadedModules = [global.defaultmodulename]
+
+    const user = message.guild.members.cache.get(process.env.OWNER);
     //const userTag = `${user.username}#${user.discriminator}`;
 
     if(args[0] == "-h") {
@@ -20,6 +23,45 @@ module.exports.run = async (bot, message, args) => {
       message.channel.send(embed);
       return;
   
+    }
+
+    if(args[0] == "load"){
+
+      if(message.author.id != process.env.OWNER) {
+        message.channel.send("You can't load modules, you are not the bot owner.");
+        return;
+      }
+
+      if(args[1] == "all"){
+        const testFolder = './commands';
+        const fs = require('fs');
+
+        var modules = []
+
+        fs.readdir(testFolder, (err, files) => {
+          message.channel.send("Loading...");
+
+          files.forEach(file => {
+            if(file == global.defaultmodulename) {
+              return
+            } else {
+            exp.load(file);
+            }
+          });
+          message.channel.send("Loaded " + args[0]);
+        });
+        return
+      }
+
+      if(exp.check(args[1]) == true) {
+        message.channel.send("Loading...");
+        exp.load(args[1]);
+        message.channel.send("Loaded " + args[0]);
+      } else {
+        message.channel.send();
+      }
+      return;
+
     }
 
     function format(seconds){
@@ -36,6 +78,7 @@ module.exports.run = async (bot, message, args) => {
       var uptime = process.uptime();
 
     if (args[0] == "changelog" ) {
+      const embed = new Discord.MessageEmbed();
       embed.setTitle("Changelog");
       embed.setColor('RANDOM');
       embed.addField("Link to the changelog", global.changelog, false);
@@ -46,13 +89,13 @@ module.exports.run = async (bot, message, args) => {
       return;
 
     } else {
-
+      const embed = new Discord.MessageEmbed();
         embed.setTitle("Bot Info");
         embed.setColor('RANDOM');
         embed.addField( "Bot Owner" , user, true);
         embed.addField("Uptime:", format(uptime), true);
-        embed.addBlankField(true);
         embed.addField("Version:", yarn.version, true);
+        // embed.addField("Loaded Modules:", loadedModules.join(", "), false); // ! maybe later.
         embed.addField("Bot Commands", global.cmds, false);
         if(process.env.CLIENTID) embed.addField("Invite:", "https://discord.com/api/oauth2/authorize?client_id=" + process.env.CLIENTID + "&permissions=8&scope=bot")
 

@@ -1,6 +1,6 @@
 const Discord = require("discord.js")
 require('dotenv').config()
-const global = require("./commands/configs/global.json")
+const global = require("./configs/global.json")
 const fs = require("fs")
 const bot = new Discord.Client();
 const main = require('./exports');
@@ -14,7 +14,7 @@ console.clear()
 console.log("xBOT CONSOLE")
 console.log("------------")
 
-fs.readdir("./commands/enabled", (err, files) => {
+fs.readdir(`./commands/${global.defaultmodulename}`, (err, files) => {
   if(err) console.log(err);
 
   let jsfile = files.filter(f => f.split(".").pop() === "js");
@@ -25,7 +25,7 @@ fs.readdir("./commands/enabled", (err, files) => {
   }
 
   jsfile.forEach((f, i) =>{
-      let props = require(`./commands/enabled/${f}`);
+      let props = require(`./commands/${global.defaultmodulename}/${f}`);
       console.log(`[*] ${f} loaded!`);
       bot.commands.set(props.help.name, props);
       props.help.aliases.forEach(alias => {
@@ -39,6 +39,7 @@ fs.readdir("./commands/enabled", (err, files) => {
 
 bot.on("ready", () => {
   console.log("[!] " + bot.user.username + " is online.")
+  console.log("------------");
   bot.user.setActivity(global.name, {
     type: global.presence // WATCHING, STREAMING, LISTENING OR PLAYING set it in global.json
   });
@@ -59,5 +60,8 @@ bot.on("message", async message => {
   const commandfile = bot.commands.get(command.slice(prefix.length)) || bot.commands.get(bot.aliases.get(command.slice(prefix.length)));
   if(commandfile) commandfile.run(bot,message,args);
 })
+
+exports.loadCommand = function(a, b){bot.commands.set(a, b)}
+exports.loadAlias = function(c, d){bot.aliases.set(c, d)}
 
 bot.login(process.env.TOKEN) // change your token in the global.json

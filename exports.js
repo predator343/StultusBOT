@@ -1,7 +1,7 @@
 const fs = require("fs");
 const Discord = require('discord.js');
 const main = require("./exports");
-const config = require("./commands/configs/global.json");
+const config = require("./configs/global.json");
 require("dotenv").config();
 const crypto = require("crypto");
 
@@ -125,3 +125,38 @@ exports.stats = function(content) {
 exports.hash = function(content, type) {
     return crypto.createHash(type).update(content).digest("hex");
 };
+exports.check = function(folder){
+    if (fs.existsSync(`./commands/${folder}`)){
+        return true;
+    } else {
+        return false;
+    }
+}
+exports.load = function(folder){
+
+    const index = require('./index')
+
+    if (fs.existsSync(`./commands/${folder}`)) {
+        fs.readdir(`./commands/${folder}`, (err, files) => {
+        if(err) console.log(err);
+      
+        let jsfile = files.filter(f => f.split(".").pop() === "js");
+      
+        if(jsfile.length <= 0){
+          console.log("[!] Couldn't find commands.");
+          return;
+        }
+      
+        jsfile.forEach((f, i) =>{
+            let props = require(`./commands/${folder}/${f}`);
+            index.loadCommand(props.help.name, props);
+            props.help.aliases.forEach(alias => {
+            index.loadAlias(alias, props.help.name);
+            });
+            console.log(`[*] ${f} loaded!`);
+        });
+        })
+    } else {
+    console.log('tried to load ' + folder + ' but could not find it.')
+    }
+}
