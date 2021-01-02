@@ -1,5 +1,9 @@
 const Discord = require('discord.js');
+<<<<<<< HEAD:commands/fun/fun_time.js
 const conf = require('../../configs/global.json');
+=======
+const conf = require('../configs/global.json');
+>>>>>>> master:commands/enabled/fun_time.js
 const embed = new Discord.MessageEmbed();
 var date = new Date();
 

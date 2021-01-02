@@ -3,7 +3,6 @@ const global = require("../../configs/global.json");
 const yarn = require("../../package.json");
 const exp = require('../../exports')
 const env = require('dotenv');
-const got = require('got');
 
 module.exports.run = async (bot, message, args) => {
   //this is where the actual code for the command goes

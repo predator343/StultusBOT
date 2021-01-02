@@ -1,6 +1,10 @@
 const Discord = require('discord.js');
 const embed = new Discord.MessageEmbed();
+<<<<<<< HEAD:commands/fun/fun_coinflip.js
 const conf = require("../../configs/global.json");
+=======
+const conf = require("../configs/global.json");
+>>>>>>> master:commands/enabled/fun_coinflip.js
 
 module.exports.run = async (bot, message, args) => {
   // thanks to Will for this code.

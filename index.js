@@ -41,7 +41,7 @@ bot.on("ready", () => {
   console.log("[!] " + bot.user.username + " is online.")
   console.log("------------");
   bot.user.setActivity(global.name, {
-    type: global.presence // WATCHING, STREAMING, LISTENING OR PLAYING set it in global.json
+    type: global.presence // ! WATCHING, STREAMING, LISTENING OR PLAYING set it in global.json
   });
 });
 
@@ -56,7 +56,6 @@ bot.on("message", async message => {
   let prefix = global.prefix;
 
 
-  //checks if message contains a command and runs it
   const commandfile = bot.commands.get(command.slice(prefix.length)) || bot.commands.get(bot.aliases.get(command.slice(prefix.length)));
   if(commandfile) commandfile.run(bot,message,args);
 })
