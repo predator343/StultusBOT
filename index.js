@@ -53,7 +53,9 @@ bot.on("ready", () => {
 
   setInterval(function() {
     got(global.heroku);
-}, 900 * 1000);
+}, 900 * 1000).catch(function() {
+  exp.log("err");
+});
 
 });
 
