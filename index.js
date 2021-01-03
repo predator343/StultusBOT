@@ -51,11 +51,8 @@ bot.on("ready", () => {
   http.createServer().listen(process.env.PORT || 00)
   // ? SETUP AN ACCOUNT AT cron-job.org FOR KEEPING THE BOT ALIVE.
 
-  setInterval(function() {
-    got(global.heroku);
-}, 900 * 1000).catch(function() {
-  exp.log("err");
-});
+  // unquote if on heroku
+  // setInterval(function() {got(global.heroku)}, 900 * 1000)
 
 });
 
