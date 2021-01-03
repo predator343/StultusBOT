@@ -4,6 +4,7 @@
 
 + added admin_readlogs.js sends logs to owner.
 + added reload command.. removes all modules.
++ keepAlive for heroku added.
 
 ## [v1.4.1](https://github.com/codeducks/xBOT/releases/tag/v1.4.1) (3/1/2021)
 
