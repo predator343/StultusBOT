@@ -9,6 +9,7 @@
     "presence": "WATCHING",
     "name": "the chats!",
 
+    "heroku": "https://xbota.herokuapp.com/",
     "github": "https://github.com/codeducks/xBOT",
     "cmds": "https://codeducks.github.io/xBOT",
     "changelog": "https://codeducks.github.io/xBOT/changelog"

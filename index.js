@@ -5,6 +5,7 @@ const fs = require("fs")
 const bot = new Discord.Client();
 const exp = require('./exports');
 const http = require('http');
+const { default: got } = require("got/dist/source");
 
 bot.commands = new Discord.Collection();
 bot.aliases = new Discord.Collection();
@@ -49,6 +50,10 @@ bot.on("ready", () => {
   // ? FOR HEROKU.
   http.createServer().listen(process.env.PORT || 00)
   // ? SETUP AN ACCOUNT AT cron-job.org FOR KEEPING THE BOT ALIVE.
+
+  setInterval(function() {
+    got(global.heroku);
+}, 900 * 1000);
 
 });
 
