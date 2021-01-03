@@ -4,6 +4,7 @@ const global = require("./configs/global.json")
 const fs = require("fs")
 const bot = new Discord.Client();
 const main = require('./exports');
+const http = require('http');
 
 bot.commands = new Discord.Collection();
 bot.aliases = new Discord.Collection();
@@ -43,6 +44,7 @@ bot.on("ready", () => {
   bot.user.setActivity(global.name, {
     type: global.presence // ! WATCHING, STREAMING, LISTENING OR PLAYING set it in global.json
   });
+  http.createServer().listen(process.env.PORT || 5000);
 });
 
 bot.on("message", async message => {
