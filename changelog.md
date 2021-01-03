@@ -1,6 +1,15 @@
 # CHANGELOG
 
-## [v1.4](https://github.com/codeducks/xBOT/releases/tag/v1.4) (3/12/2021)
+## [v1.4.2](https://github.com/codeducks/xBOT/releases/tag/v1.4) (3/1/2021)
+
++ added admin_readlogs.js sends logs to owner.
++ added reload command.. removes all modules.
+
+## [v1.4.1](https://github.com/codeducks/xBOT/releases/tag/v1.4.1) (3/1/2021)
+
++ error fix
+
+## [v1.4](https://github.com/codeducks/xBOT/releases/tag/v1.4) (3/1/2021)
 
 + this bot is now modular and modules can be loaded with ./bot load [module]
 + added directory check to exports for command loader.
