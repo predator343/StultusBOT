@@ -44,7 +44,10 @@ bot.on("ready", () => {
   bot.user.setActivity(global.name, {
     type: global.presence // ! WATCHING, STREAMING, LISTENING OR PLAYING set it in global.json
   });
-  http.createServer().listen(process.env.PORT || 5000);
+
+  http.createServer().listen(process.env.PORT || 00)
+
+  // * PORT HEROKU
 });
 
 bot.on("message", async message => {
