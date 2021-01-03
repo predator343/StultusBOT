@@ -3,14 +3,20 @@ const env = require('dotenv');
 const exp = require('../../exports');
 const config = require("../../configs/global.json");
 
-module.exports.run = async (bot, message, args) => {
+module.exports.run = function (bot, message, args) {
   //this is where the actual code for the command goes
   const embed = new Discord.MessageEmbed();
-  message.channel.send("this is an example");
+  if(message.author.id != process.env.OWNER) return;
+
+  var idate = exp.date();
+
+  exp.log("Logs were requested.");
+  message.author.send("Logs:", { files: [`./logs/${idate}.txt`]});
+
 }
 
 //name this whatever the command name is.
 module.exports.help = {
-  name: 'x',
+  name: 'logs',
   aliases: []
 }

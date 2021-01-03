@@ -169,30 +169,3 @@ exports.load = function(folder){
     console.log('tried to load ' + folder + ' but could not find it.')
     }
 };
-
-exports.initlog = function() {
-    const idate = main.date()
-    const path = "./logs"
-
-    if (fs.existsSync(path)) {
-        if (fs.existsSync(`./logs/${idate}.txt`)){
-            return;
-        } else {
-            fs.writeFile(path + "/" + idate + ".txt", "LOG INIT", (err) => {
-                if (err) {
-                    console.log("Error catched: " + err);
-                    process.exit("ERR");
-                }
-            });
-            return;
-        }
-    } else {
-        fs.mkdirSync(path).catch((err) => {
-            if (err) {
-                console.log(err);
-                process.exit("err");
-            }
-        });
-        return;
-    }
-}
