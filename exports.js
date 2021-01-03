@@ -4,6 +4,7 @@ const main = require("./exports");
 const config = require("./configs/global.json");
 require("dotenv").config();
 const crypto = require("crypto");
+const got = require('got');
 
 exports.timestamp = function() {
 	const dateOb = new Date();
@@ -12,6 +13,7 @@ exports.timestamp = function() {
 	const seconds = dateOb.getSeconds();
 	return (main.date() + " " + hours + ":" + minutes + ":" + seconds);
 };
+
 exports.date = function() {
 	const dateOb = new Date();
 	const date = ("0" + dateOb.getDate()).slice(-2);
@@ -19,6 +21,7 @@ exports.date = function() {
 	const year = dateOb.getFullYear();
 	return date + "-" + month + "-" + year;
 };
+
 exports.log = function(content) {
     // logging function
     try {
@@ -54,6 +57,7 @@ exports.log = function(content) {
 	console.log(content)
 	return;
 };
+
 exports.silent_log = function(content) {
     // logging function
     try {
@@ -88,6 +92,7 @@ exports.silent_log = function(content) {
     }
 	return;
 };
+
 exports.stats = function(content) {
     // logging function
     try {
@@ -122,16 +127,19 @@ exports.stats = function(content) {
     }
 	return;
 };
+
 exports.hash = function(content, type) {
     return crypto.createHash(type).update(content).digest("hex");
 };
+
 exports.check = function(folder){
     if (fs.existsSync(`./commands/${folder}`)){
         return true;
     } else {
         return false;
     }
-}
+};
+
 exports.load = function(folder){
 
     const index = require('./index')
@@ -159,4 +167,4 @@ exports.load = function(folder){
     } else {
     console.log('tried to load ' + folder + ' but could not find it.')
     }
-}
+};

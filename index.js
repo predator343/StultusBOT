@@ -44,7 +44,11 @@ bot.on("ready", () => {
   bot.user.setActivity(global.name, {
     type: global.presence // ! WATCHING, STREAMING, LISTENING OR PLAYING set it in global.json
   });
-  http.createServer().listen(process.env.PORT || 5000);
+
+  // ? FOR HEROKU.
+  http.createServer().listen(process.env.PORT || 00)
+  // ? SETUP AN ACCOUNT AT cron-job.org FOR KEEPING THE BOT ALIVE.
+
 });
 
 bot.on("message", async message => {

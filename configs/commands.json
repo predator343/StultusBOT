@@ -1,0 +1,22 @@
+{
+    "ban": "bans the specified user",
+    "bot": "shows bot info",
+    "bot_load": "loads a module",
+    "cringe": "Gets a cringe post from r/cringe",
+    "coinflip": "flips a coin",
+    "del": "deletes 1-100 messages",
+    "eval" : "You know what it does",
+    "exit": "Stops the bot",
+    "hash": "hashes the given string",
+    "kick": "kicks the specified user.",
+    "meme": "Gets a meme from r/memes",
+    "nuke": "Nukes a server or channel",
+    "numgen": "generates a number.",
+    "ping": "pong",
+    "prefix": "changes the prefix",
+    "presence": "changes the presence.",
+    "say": "Say something as the bot!",
+    "sophie": "Shows an embed about Sophie and a link to the report form.",
+    "time": "tells the time.",
+    "uptime": "shows the uptime of the bot"
+}
