@@ -41,6 +41,9 @@ fs.readdir(`./commands/${global.defaultmodulename}`, (err, files) => {
 bot.on("ready", () => {
   console.log("[!] " + bot.user.username + " is online.")
   console.log("------------");
+
+  main.log("log init");
+
   bot.user.setActivity(global.name, {
     type: global.presence // ! WATCHING, STREAMING, LISTENING OR PLAYING set it in global.json
   });

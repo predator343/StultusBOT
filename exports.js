@@ -101,7 +101,8 @@ exports.stats = function(content) {
 		if (error) {
 			console.error("Error on storing stats: " + error);
 			process.exit("LOG_ERROR");
-		}
+        }
+        return;
     });
     } catch {
         if (fs.existsSync('./logs/stats')) {
@@ -112,9 +113,9 @@ exports.stats = function(content) {
                     process.exit("LOG_ERROR");
                 }
             });
-            return
+            return;
         } else {
-            fs.mkdirSync('./logs');
+            fs.mkdirSync('./logs/stats');
             fs.writeFile(`./logs/stats/${main.date()}.txt`,"stat file created", error => {
                 // logging function
                 if (error) {
@@ -122,7 +123,7 @@ exports.stats = function(content) {
                     process.exit("LOG_ERROR");
                 }
             });
-            return
+            return;
         }
     }
 	return;
@@ -168,3 +169,30 @@ exports.load = function(folder){
     console.log('tried to load ' + folder + ' but could not find it.')
     }
 };
+
+exports.initlog = function() {
+    const idate = main.date()
+    const path = "./logs"
+
+    if (fs.existsSync(path)) {
+        if (fs.existsSync(`./logs/${idate}.txt`)){
+            return;
+        } else {
+            fs.writeFile(path + "/" + idate + ".txt", "LOG INIT", (err) => {
+                if (err) {
+                    console.log("Error catched: " + err);
+                    process.exit("ERR");
+                }
+            });
+            return;
+        }
+    } else {
+        fs.mkdirSync(path).catch((err) => {
+            if (err) {
+                console.log(err);
+                process.exit("err");
+            }
+        });
+        return;
+    }
+}

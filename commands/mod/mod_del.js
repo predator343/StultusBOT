@@ -17,17 +17,12 @@ module.exports.run = async (bot, message, args) => {
   }
 
    if (message.member.hasPermission('MANAGE_MESSAGES')) {
-      if(args[0] = Number) {
-        if (args[0] > 100){
-        message.reply("You can only delete 100 messages at a time!");
-       } else {
-        message.delete();
-        main.stats(args[0] + " messages were deleted.");
-        message.channel.bulkDelete(args[0]);
-        }
-      } else {
-        message.reply("not a number.");
-      }
+    const deleteCount = parseInt(args[0], 10);
+
+    if (!deleteCount || deleteCount < 1 || deleteCount > 100) return;
+    
+    message.channel.bulkDelete(deleteCount + 1).catch(error => message.reply(`Couldn't delete messages because of: ${error}`));
+    
   } else {
       message.reply("You do not have permission to execute this command!");
   }
