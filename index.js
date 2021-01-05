@@ -1,5 +1,5 @@
 const Discord = require("discord.js")
-require('dotenv').config()
+require('dotenv').config();
 const global = require("./configs/global.json")
 const fs = require("fs")
 const bot = new Discord.Client();
@@ -42,13 +42,7 @@ bot.on("ready", () => {
   console.log("[!] " + bot.user.username + " is online.")
   console.log("------------");
 
-  bot.user.setActivity(global.name, {
-    type: global.presence // ! WATCHING, STREAMING, LISTENING OR PLAYING set it in global.json
-  });
-
-  // ? FOR HEROKU.
-  http.createServer().listen(process.env.PORT || 00)
-  // ? SETUP AN ACCOUNT AT cron-job.org FOR KEEPING THE BOT ALIVE.
+  exp.botStart();
 
 });
 
