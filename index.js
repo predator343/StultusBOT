@@ -11,15 +11,18 @@ bot.aliases = new Discord.Collection();
 
 if(process.env.TOKEN === "setmeplease") return console.log("[!] Set your token up! Go to https://www.discordapp.com/developers and generate a token from a bot user.");
 
-console.clear()
-console.log("xBOT CONSOLE")
-console.log("------------")
+console.clear();
+console.log("Loading...")
 
 bot.on("ready", () => {
 
+  console.clear()
+  console.log( bot.user.username + " CONSOLE")
+  console.log("------------")
+  
   exp.botStart();
 
-  var startModules = ["default", "admin"]
+  var startModules = ["default", "admin", "util"] // modules to load at start
   startModules.forEach((f, i) =>{
     exp.load(f);
   });
@@ -37,7 +40,7 @@ bot.on("message", async message => {
   //a little bit of data parsing/general checks
   if (message.content.indexOf(global.prefix) !== 0) return;
   if(message.author.bot) return;
-  if(message.channel.type === 'dm') return;
+  if(message.channel.type === 'dm') return; // ? comment out if you want to enable commands in DMs.
   let content = message.content.split(" ");
   let command = content[0];
   let args = content.slice(1);

@@ -184,7 +184,7 @@ exports.botStart = function() {
 
 }
 
-exports.api = function() {
+exports.api = function() { // ! API is in alpha. do NOT use.
   // ? FOR HEROKU.
   try {
     app.listen(process.env.PORT || 1900)
