@@ -13,7 +13,7 @@ var time = " | " + hour + ":" + minute;
 
 module.exports.run = async (bot, message, args) => {
   //this is where the actual code for the command goes
-  const stream = new Discord.RichEmbed()
+  const stream = new Discord.MessageEmbed()
 	.setColor('#0099ff')
     .setTitle("Livestream")
     .setDescription("The link to the almighty livestream.")

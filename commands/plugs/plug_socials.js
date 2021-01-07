@@ -13,7 +13,7 @@ var time = " | " + hour + ":" + minute;
 
 module.exports.run = async (bot, message, args) => {
   //this is where the actual code for the command goes
-  const socialsembed = new Discord.RichEmbed()
+  const socialsembed = new Discord.MessageEmbed()
 	.setColor('#0099ff')
 	.setTitle(socials.title)
     .addField(socials.fieldtitle1, socials.fieldcontent1, socials.inline)
