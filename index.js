@@ -23,10 +23,6 @@ bot.on("ready", () => {
   
   exp.botStart();
 
-  global.defaultmodules.forEach((f, i) =>{
-    exp.load(f);
-  });
-
   bot.user.setActivity(global.name, {
     type: global.presence // ! WATCHING, STREAMING, LISTENING OR PLAYING set it in global.json
   });
@@ -80,7 +76,9 @@ exports.reload = function(arg, module) {
     break;
 
     default:
-      exp.load("default");
+      global.defaultmodules.forEach((f, i) =>{
+        exp.load(f);
+      });
     break;
   }
   
