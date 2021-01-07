@@ -1,5 +1,4 @@
 const Discord = require('discord.js');
-const opn = require('opn');
 const credits = require("../configs/credits.json")
 
 var date = new Date();

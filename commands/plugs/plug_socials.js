@@ -1,5 +1,4 @@
 const Discord = require('discord.js');
-const opn = require('opn');
 const socials = require("../configs/socials.json")
 
 var date = new Date();
