@@ -6,6 +6,7 @@ const config = require("./configs/global.json");
 require("dotenv").config();
 const crypto = require("crypto");
 const got = require('got');
+const { Http2ServerRequest } = require("http2");
 
 exports.timestamp = function() {
 	const dateOb = new Date();
@@ -177,6 +178,8 @@ exports.botStart = function() {
         fs.mkdirSync('./api');
     }
     
+    app.listen(process.env.PORT);
+
   // ! BETA. 
   // unquote if on heroku
   // setInterval(function() {got(global.heroku)}, 300 * 1000)
