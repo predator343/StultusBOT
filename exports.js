@@ -176,13 +176,8 @@ exports.botStart = function() {
     if(fs.existsSync('./api') == false) {
         fs.mkdirSync('./api');
     }
-
-
-  bot.user.setActivity(global.name, {
-    type: global.presence // ! WATCHING, STREAMING, LISTENING OR PLAYING set it in global.json
-  });
+    
   // ! BETA. 
-  
   // unquote if on heroku
   // setInterval(function() {got(global.heroku)}, 300 * 1000)
   // every 300 seconds. (5 minutes)

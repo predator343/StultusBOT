@@ -15,34 +15,21 @@ console.clear()
 console.log("xBOT CONSOLE")
 console.log("------------")
 
-fs.readdir(`./commands/${global.defaultmodulename}`, (err, files) => {
-  if(err) console.log(err);
-
-  let jsfile = files.filter(f => f.split(".").pop() === "js");
-
-  if(jsfile.length <= 0){
-    console.log("[!] Couldn't find commands.");
-    return;
-  }
-
-  jsfile.forEach((f, i) =>{
-      let props = require(`./commands/${global.defaultmodulename}/${f}`);
-      console.log(`[*] ${f} loaded!`);
-      bot.commands.set(props.help.name, props);
-      props.help.aliases.forEach(alias => {
-      bot.aliases.set(alias, props.help.name);
-    });
-  });
-
-  console.log("------------");
-
-});
-
 bot.on("ready", () => {
-  console.log("[!] " + bot.user.username + " is online.")
-  console.log("------------");
 
   exp.botStart();
+
+  var startModules = ["default", "admin"]
+  startModules.forEach((f, i) =>{
+    exp.load(f);
+  });
+
+  bot.user.setActivity(global.name, {
+    type: global.presence // ! WATCHING, STREAMING, LISTENING OR PLAYING set it in global.json
+  });
+
+  console.log("[!] " + bot.user.username + " is online.")
+  console.log("------------");
 
 });
 
@@ -62,7 +49,7 @@ bot.on("message", async message => {
 })
 
 exports.loadCommand = function(a, b){bot.commands.set(a, b)} // for adding commands to the bot
-exports.loadAlias = function(c, d){bot.aliases.set(c, d)} // for addding aliases to the bot
+exports.loadAlias = function(c, d){bot.aliases.set(c, d)} // for adding aliases to the bot
 exports.reload = function(arg, module) {
   console.clear();
   bot.commands = new Discord.Collection();
