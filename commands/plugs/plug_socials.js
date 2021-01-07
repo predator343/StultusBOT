@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-const socials = require("../configs/socials.json")
+const socials = require("../../configs/socials.json")
 
 var date = new Date();
 var hour = date.getHours();

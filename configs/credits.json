@@ -1,0 +1,15 @@
+{
+    "title": "Credits",
+    "description": "This bot was created by FaultyDev!",
+    
+    "title1": "GitHub",
+    "content1": "https://github.com/faultydev",
+    "title2": "Bot Template",
+    "content2": "https://github.com/codeducks/xbot",
+    "title3": "Twitch",
+    "content3": "https://twitch.tv/thefaultyscreen",
+    "inline": false,
+
+    "footer": "Bot by TheFaultyScreen"
+
+}

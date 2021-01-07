@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-const credits = require("../configs/credits.json")
+const credits = require("../../configs/credits.json")
 
 var date = new Date();
 var hour = date.getHours();

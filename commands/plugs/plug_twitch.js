@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-const help = require('../configs/help.json');
+const help = require('../../configs/help.json');
 
 var date = new Date();
 var hour = date.getHours();

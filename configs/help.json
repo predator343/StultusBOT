@@ -1,0 +1,27 @@
+{
+    "title": "Help",
+    "description": "i'm a handy dandy help embed.",
+    
+    "socials1": "socials",
+    "socials2": "This shows Stultus' socials",
+    
+    "twitch1": "twitch",
+    "twitch2": "just a quick link to the Stultus stream.",
+
+    "time1" : "time",
+    "time2" : "displays the time!",
+
+    "cf1" : "coinflip",
+    "cf2" : "does a quick coinflip",
+
+    "ng1" : "numgen",
+    "ng2" : "generates a number.",
+    
+    "help1": "help",
+    "help2": "this command shows me!",
+
+    "inline": false,
+
+    "footer": "!credits"
+
+}
