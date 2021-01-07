@@ -2,14 +2,15 @@
     "md": "**",
     "num_def": "1000",
 
-    "prefix": "./",
+    "prefix": "!",
 
     "defaultmodules": ["default", "admin", "util"],
     
     "presence": "WATCHING",
     "name": "the chats!",
 
-    "github": "https://github.com/codeducks/xBOT",
+    "heroku": "https://stultus.herokuapp.com/",
+    "github": "https://github.com/faultydev/StultusBOT",
     "cmds": "https://codeducks.github.io/xBOT",
-    "changelog": "https://codeducks.github.io/xBOT/changelog"
+    "changelog": "https://faultydev.github.io/StultusBOT/changelog"
 }
