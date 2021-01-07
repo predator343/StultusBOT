@@ -4,7 +4,7 @@
 
     "prefix": "!",
 
-    "defaultmodules": ["default", "admin", "util"],
+    "defaultmodules": ["default", "admin", "util", "plugs"],
     
     "presence": "WATCHING",
     "name": "the chats!",
