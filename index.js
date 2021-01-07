@@ -76,9 +76,7 @@ exports.reload = function(arg, module) {
     break;
 
     default:
-      global.defaultmodules.forEach((f, i) =>{
-        exp.load(f);
-      });
+      exp.load("default");
     break;
   }
   

@@ -178,8 +178,8 @@ exports.botStart = function() {
         fs.mkdirSync('./api');
     }
     
-    global.defaultmodules.forEach((f, i) =>{
-        exp.load(f);
+    config.defaultmodules.forEach((f, i) =>{
+        main.load(f);
     });
 
     app.listen(process.env.PORT);
