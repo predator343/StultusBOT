@@ -22,8 +22,7 @@ bot.on("ready", () => {
   
   exp.botStart();
 
-  var startModules = ["default", "admin", "util"] // modules to load at start
-  startModules.forEach((f, i) =>{
+  global.defaultmodules.forEach((f, i) =>{
     exp.load(f);
   });
 
